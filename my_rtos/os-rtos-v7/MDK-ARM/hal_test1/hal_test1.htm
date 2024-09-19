@@ -3,7 +3,7 @@
 <title>Static Call Graph - [hal_test1\hal_test1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image hal_test1\hal_test1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Sep 17 11:39:47 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Sep 19 11:47:08 2024
 <BR><P>
 <H3>Maximum Stack Usage =        152 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -93,7 +93,7 @@ Global Symbols
 <P><STRONG><a name="[37]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(.text)
 </UL>
-<P><STRONG><a name="[8d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[88]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[3e]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -103,15 +103,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[8e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[89]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[8f]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[8a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[90]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[8b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[91]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[8c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[92]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[8d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, cpu.o(.emb_text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = PendSV_Handler &rArr; schedule &rArr; jump_wei
@@ -250,23 +250,14 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f103xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[8c]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSend
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
-</UL>
-
-<P><STRONG><a name="[93]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
-
-<P><STRONG><a name="[94]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
-
 <P><STRONG><a name="[42]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[95]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[8e]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[96]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[8f]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[41]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -278,13 +269,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[97]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[90]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[43]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[98]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[91]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[7d]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -296,12 +287,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[99]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[92]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[76]"></a>AddTaskptob</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, thread.o(i.AddTaskptob))
-<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
+<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
@@ -673,12 +662,12 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[9a]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+<P><STRONG><a name="[93]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
 
 <P><STRONG><a name="[7f]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueuePrint
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueuePrint
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task4Entry
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task3Entry
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task2Entry
@@ -689,11 +678,11 @@ Global Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addTaskToList
 </UL>
 
-<P><STRONG><a name="[9b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[94]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[95]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[9d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[96]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>addTaskToList</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, thread.o(i.addTaskToList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = addTaskToList &rArr; __2printf
@@ -715,9 +704,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[73]"></a>enterCritical</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, cpu.o(i.enterCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
+<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
@@ -733,9 +720,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[77]"></a>exitCritical</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, cpu.o(i.exitCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
+<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
@@ -793,9 +778,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;every_delay
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
@@ -804,9 +787,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
 <P><STRONG><a name="[40]"></a>schedule</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, thread.o(i.schedule))
@@ -818,9 +799,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[74]"></a>set_task_delay</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, thread.o(i.set_task_delay))
-<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 </UL>
 
 <P><STRONG><a name="[3a]"></a>task1Entry</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, main.o(i.task1Entry))
@@ -831,20 +810,18 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
-<P><STRONG><a name="[3b]"></a>task2Entry</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, main.o(i.task2Entry))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = task2Entry &rArr; xQueueGenericSend &rArr; removeTaskpfroma &rArr; __2printf
+<P><STRONG><a name="[3b]"></a>task2Entry</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, main.o(i.task2Entry))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = task2Entry &rArr; Tsakdelay &rArr; removeTaskpfroma &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
-<P><STRONG><a name="[3c]"></a>task3Entry</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, main.o(i.task3Entry))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = task3Entry &rArr; xQueueGenericReceive &rArr; removeTaskpfroma &rArr; __2printf
+<P><STRONG><a name="[3c]"></a>task3Entry</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, main.o(i.task3Entry))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = task3Entry &rArr; Tsakdelay &rArr; removeTaskpfroma &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
@@ -852,7 +829,7 @@ Global Symbols
 <P><STRONG><a name="[3d]"></a>task4Entry</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, main.o(i.task4Entry))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = task4Entry &rArr; Tsakdelay &rArr; removeTaskpfroma &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueuePrint
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueuePrint
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tsakdelay
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -862,7 +839,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Callback
 </UL>
 
-<P><STRONG><a name="[89]"></a>vQueuePrint</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, queue.o(i.vQueuePrint))
+<P><STRONG><a name="[87]"></a>vQueuePrint</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, queue.o(i.vQueuePrint))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = vQueuePrint &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -876,50 +853,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[88]"></a>xQueueGenericReceive</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, queue.o(i.xQueueGenericReceive))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = xQueueGenericReceive &rArr; removeTaskpfroma &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_task_delay
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;removeTaskpfroma
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AddTaskptob
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;restart_pendsv
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitCritical
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enterCritical
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task3Entry
-</UL>
-
-<P><STRONG><a name="[87]"></a>xQueueGenericSend</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, queue.o(i.xQueueGenericSend))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = xQueueGenericSend &rArr; removeTaskpfroma &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSend
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_task_delay
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;removeTaskpfroma
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AddTaskptob
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;restart_pendsv
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitCritical
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enterCritical
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task2Entry
-</UL>
-
-<P><STRONG><a name="[8a]"></a>xQueueReceive</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, queue.o(i.xQueueReceive))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = xQueueReceive
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-</UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReceive
-</UL>
-
-<P><STRONG><a name="[8b]"></a>xQueueSend</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, queue.o(i.xQueueSend))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = xQueueSend
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-</UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 <P>
 <H3>

@@ -27,7 +27,50 @@ Project File Date:  09/13/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'hal_test1'
-"hal_test1\hal_test1.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+../Drivers/driver/sys_time.h(7): warning:  #1295-D: Deprecated declaration Get_Sys_Tick - give arg types
+  unsigned short int Get_Sys_Tick();
+../Drivers/driver/cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+../Drivers/driver/cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+../Core/Src/main.c(66): warning:  #223-D: function "printf" declared implicitly
+  		printf("this is task_1\r\n");
+../Core/Src/main.c(87): warning:  #223-D: function "printf" declared implicitly
+  		printf("this is task_2\r\n");
+../Core/Src/main.c(98): warning:  #223-D: function "printf" declared implicitly
+  		printf("this is task_3\r\n");	
+../Core/Src/main.c(111): warning:  #223-D: function "printf" declared implicitly
+  			printf("num_1 is %d,num_2 is %d,num_3 is %d\r\n",num_1,num_2,num_3);
+../Core/Src/main.c(188): warning:  #167-D: argument of type "int" is incompatible with parameter of type "void *"
+    createTask(task1Entry,1,0,0,64,&task_1);
+../Core/Src/main.c(188): warning:  #152-D: conversion of nonzero integer to pointer
+    createTask(task1Entry,1,0,0,64,&task_1);
+../Core/Src/main.c(189): warning:  #167-D: argument of type "int" is incompatible with parameter of type "void *"
+  	createTask(task2Entry,1,0,0,255,&task_2);
+../Core/Src/main.c(189): warning:  #152-D: conversion of nonzero integer to pointer
+  	createTask(task2Entry,1,0,0,255,&task_2);
+../Core/Src/main.c(190): warning:  #167-D: argument of type "int" is incompatible with parameter of type "void *"
+  	createTask(task3Entry,1,0,0,255,&task_3);
+../Core/Src/main.c(190): warning:  #152-D: conversion of nonzero integer to pointer
+  	createTask(task3Entry,1,0,0,255,&task_3);
+../Core/Src/main.c(191): warning:  #167-D: argument of type "int" is incompatible with parameter of type "void *"
+  	createTask(task4Entry,1,1,0,128,NULL);
+../Core/Src/main.c(191): warning:  #152-D: conversion of nonzero integer to pointer
+  	createTask(task4Entry,1,1,0,128,NULL);
+../Core/Src/main.c(197): warning:  #223-D: function "printf" declared implicitly
+  		printf("queue is found fail!\r\n");
+../Core/Src/main.c(201): warning:  #223-D: function "malloc" declared implicitly
+      test_1 = (my_rots_Queue *)malloc(sizeof(my_rots_Queue));
+../Core/Src/main.c(204): warning:  #223-D: function "printf" declared implicitly
+          printf("Memory allocation failed!\n");
+../Core/Src/main.c(210): warning:  #223-D: function "printf" declared implicitly
+          printf("Memory allocation failed!\n");
+../Core/Src/main.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=7226 RO-data=310 RW-data=96 ZI-data=4440  
+FromELF: creating hex file...
+"hal_test1\hal_test1.axf" - 0 Error(s), 19 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +93,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

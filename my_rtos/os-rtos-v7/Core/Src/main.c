@@ -72,18 +72,19 @@ void task1Entry(void *param){
 void task2Entry(void *param){
 
 	for(;;){	
-		xReturn=xQueueGenericSend(x1_Queue,(void *)test_1,portMAX_DELAY);
-		if(xReturn==pdFAIL)
-		{
+//		xReturn=xQueueGenericSend(x1_Queue,(void *)test_1,portMAX_DELAY);
+//		if(xReturn==pdFAIL)
+//		{
 
-			printf("Task_2 fail to send\r\n");
-		}
-		else
-		{
-				a++;
-			printf("this is task_2\r\n");
-		}
-		
+//			printf("Task_2 fail to send\r\n");
+//		}
+//		else
+//		{
+//				a++;
+//			printf("this is task_2\r\n");
+//		}
+//		
+		printf("this is task_2\r\n");
 		Tsakdelay(1000);
 			
 		test_1->i = a;
@@ -96,7 +97,7 @@ void task3Entry(void *param){
 	for(;;){
 		printf("this is task_3\r\n");	
 		Tsakdelay(100);
-		xQueueGenericReceive(x1_Queue,(void *)test_2,portMAX_DELAY);
+//		xQueueGenericReceive(x1_Queue,(void *)test_2,portMAX_DELAY);
 		num_3++;
 		
 	}
