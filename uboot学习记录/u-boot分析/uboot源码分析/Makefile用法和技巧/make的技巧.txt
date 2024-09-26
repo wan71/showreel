@@ -1,0 +1,3 @@
+打印Makefile的规则和变量  :make -p
+可以把make命令规则和变量存入文件：make -p >1.txt
+然后执行vi 1.txt, 使用vi命令删除注释 :     :g/^#/d
