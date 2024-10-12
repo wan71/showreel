@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 71 71, 71, LIC=GMZI6-DU2A7-VEMHA-1AJM6-W5ZIG-8RT7T
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  D:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+C:\Users\wl123\Desktop\showreel\my_rtos\os-rtos-v10\MDK-ARM\hal_test1.uvprojx
+Project File Date:  10/11/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
+Build target 'hal_test1'
+compiling main.c...
+../Drivers/driver/sys_time.h(7): warning:  #1295-D: Deprecated declaration Get_Sys_Tick - give arg types
+  unsigned short int Get_Sys_Tick();
+../Drivers/driver/cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+../Drivers/driver/cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+../Drivers/driver/heap_1.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Drivers/driver/monitor.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Drivers/driver/config.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Drivers/driver/callback.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=9126 RO-data=310 RW-data=144 ZI-data=7104  
+FromELF: creating hex file...
+"hal_test1\hal_test1.axf" - 0 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_hal_test1
+  D:\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  D:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

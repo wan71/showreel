@@ -1,6 +1,7 @@
 #include "queue.h"
 #include "stm32f1xx_hal.h"
 #include "cpu.h"
+//#include "heap_1.c"
 extern TaskControlBlock *currentTask;
 extern TaskControlBlock *nextTask;
 extern TaskControlBlock *taskLists[MAX_PRIORITY]; 
@@ -11,7 +12,7 @@ extern TaskHandle_t task_3;
 
 Queue_t *xQueueCreate(UBaseType_t uxQueueLength, UBaseType_t uxItemSize) {
     UBaseType_t xQueueSizeInBytes = uxQueueLength * uxItemSize;
-    Queue_t *pxNewQueue = (Queue_t *)malloc(sizeof(Queue_t) + xQueueSizeInBytes);
+    Queue_t *pxNewQueue = (Queue_t *)pvPortMalloc(sizeof(Queue_t) + xQueueSizeInBytes);
 
     if (pxNewQueue == NULL) {
         return NULL;  // 内存分配失败
@@ -43,7 +44,7 @@ BaseType_t xQueueSend(Queue_t *pxQueue, const void *pvItemToQueue) {
         return pdFAIL;
     }
 	
-
+		enterCritical();
     // 将数据拷贝到队列
     memcpy(pxQueue->pcWriteTo, pvItemToQueue, pxQueue->uxItemSize);
     
@@ -55,7 +56,8 @@ BaseType_t xQueueSend(Queue_t *pxQueue, const void *pvItemToQueue) {
 
     pxQueue->uxMessagesWaiting++;  // 队列中消息数量+1
 	
-		
+		// 退出临界区
+    exitCritical();
     return pdPASS;
 }
 
@@ -66,7 +68,8 @@ BaseType_t xQueueReceive(Queue_t *pxQueue, void *pvBuffer) {
         // 队列为空
         return pdFAIL;
     }
-
+	enterCritical();
+    // 将数据拷贝到队列
     // 将数据从队列中读取到缓冲区
     memcpy(pvBuffer, pxQueue->pcReadFrom, pxQueue->uxItemSize);
 
@@ -77,6 +80,7 @@ BaseType_t xQueueReceive(Queue_t *pxQueue, void *pvBuffer) {
     }
 
     pxQueue->uxMessagesWaiting--;  // 队列中消息数量-1
+		 exitCritical();
     return pdPASS;
 }
 

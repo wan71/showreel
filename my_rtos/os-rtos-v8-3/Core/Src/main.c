@@ -202,20 +202,20 @@ int main(void)
 	createTask(task4Entry,1,1,0,128,NULL);
 
 	
-	x1_Queue=xQueueCreate(1,sizeof(my_rots_Queue));
+	x1_Queue=xQueueCreate(2,sizeof(my_rots_Queue));
 	if(x1_Queue == NULL)
 	{
 		printf("queue is found fail!\r\n");
 	}
 	
 			// 分配内存空间
-    test_1 = (my_rots_Queue *)malloc(sizeof(my_rots_Queue));
+    test_1 = (my_rots_Queue *)pvPortMalloc(sizeof(my_rots_Queue));
     if (test_1 == NULL) {
         // 检查内存分配是否成功
         printf("Memory allocation failed!\n");
         return 0;
     }
-		 test_2 = (my_rots_Queue *)malloc(sizeof(my_rots_Queue));
+		 test_2 = (my_rots_Queue *)pvPortMalloc(sizeof(my_rots_Queue));
     if (test_2 == NULL) {
         // 检查内存分配是否成功
         printf("Memory allocation failed!\n");

@@ -21,7 +21,9 @@ typedef struct TaskControlBlock {
     int stackSize;                   // 栈大小
     int priority;                    // 任务优先级
 	  uint32_t delay;
-    int yield;                       // 是否设置礼让（1: 礼让, 0: 不礼让）
+    int yield;    
+	// 是否设置礼让（1: 礼让, 0: 不礼让）
+	struct TaskControlBlock *nextInMonitorList;   // 指向下一个任务的监控指针
     struct TaskControlBlock *next;   // 指向下一个任务的指针
 } TaskControlBlock;
 

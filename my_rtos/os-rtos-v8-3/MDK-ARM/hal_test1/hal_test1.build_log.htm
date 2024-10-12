@@ -22,11 +22,43 @@ Dialog DLL:      TCM.DLL V1.35.1.0
  
 <h2>Project:</h2>
 C:\Users\wl123\Desktop\showreel\my_rtos\os-rtos-v8-3\MDK-ARM\hal_test1.uvprojx
-Project File Date:  09/29/2024
+Project File Date:  10/09/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'hal_test1'
+compiling queue.c...
+..\Drivers\driver\cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+..\Drivers\driver\cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+..\Drivers\driver\queue.c(15): warning:  #223-D: function "pvPortMalloc" declared implicitly
+      Queue_t *pxNewQueue = (Queue_t *)pvPortMalloc(sizeof(Queue_t) + xQueueSizeInBytes);
+..\Drivers\driver\queue.c(49): warning:  #223-D: function "memcpy" declared implicitly
+      memcpy(pxQueue->pcWriteTo, pvItemToQueue, pxQueue->uxItemSize);
+..\Drivers\driver\queue.c(74): warning:  #223-D: function "memcpy" declared implicitly
+      memcpy(pvBuffer, pxQueue->pcReadFrom, pxQueue->uxItemSize);
+..\Drivers\driver\queue.c(89): warning:  #223-D: function "printf" declared implicitly
+      printf("Queue Length: %d\r\n", pxQueue->uxLength);
+..\Drivers\driver\queue.c: 6 warnings, 0 errors
+compiling cpu.c...
+..\Drivers\driver\cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+..\Drivers\driver\cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+..\Drivers\driver\cpu.c: 2 warnings, 0 errors
+compiling heap_1.c...
+..\Drivers\driver\cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+..\Drivers\driver\cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+..\Drivers\driver\heap_1.h(45): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\driver\heap_1.c(6): warning:  #47-D: incompatible redefinition of macro "portBYTE_ALIGNMENT"  (declared at line 8 of "..\Drivers\driver\heap_1.h")
+  #define portBYTE_ALIGNMENT      8
+..\Drivers\driver\heap_1.c(12): warning:  #177-D: variable "xNextFreeByte"  was declared but never referenced
+  static size_t xNextFreeByte = ( size_t ) 0U;
+..\Drivers\driver\heap_1.c: 5 warnings, 0 errors
 compiling main.c...
 ../Drivers/driver/sys_time.h(7): warning:  #1295-D: Deprecated declaration Get_Sys_Tick - give arg types
   unsigned short int Get_Sys_Tick();
@@ -40,8 +72,6 @@ compiling main.c...
               printf("Memory allocation for TaskControlBlock failed\r\n");
 ../Core/Src/main.c(75): warning:  #223-D: function "printf" declared implicitly
   		printf("this is task_1\r\n");
-../Core/Src/main.c(67): warning:  #177-D: variable "a"  was declared but never referenced
-  		char a[10000];
 ../Core/Src/main.c(97): warning:  #223-D: function "printf" declared implicitly
   		printf("this is task_2\r\n");
 ../Core/Src/main.c(108): warning:  #223-D: function "printf" declared implicitly
@@ -66,17 +96,35 @@ compiling main.c...
   	createTask(task4Entry,1,1,0,128,NULL);
 ../Core/Src/main.c(208): warning:  #223-D: function "printf" declared implicitly
   		printf("queue is found fail!\r\n");
-../Core/Src/main.c(212): warning:  #223-D: function "malloc" declared implicitly
-      test_1 = (my_rots_Queue *)malloc(sizeof(my_rots_Queue));
 ../Core/Src/main.c(215): warning:  #223-D: function "printf" declared implicitly
           printf("Memory allocation failed!\n");
 ../Core/Src/main.c(221): warning:  #223-D: function "printf" declared implicitly
           printf("Memory allocation failed!\n");
-../Core/Src/main.c: 22 warnings, 0 errors
+../Core/Src/main.c: 20 warnings, 0 errors
+compiling thread.c...
+..\Drivers\driver\cpu.h(7): warning:  #1295-D: Deprecated declaration triggerPendSV - give arg types
+  void triggerPendSV();
+..\Drivers\driver\cpu.h(10): warning:  #1295-D: Deprecated declaration restart_pendsv - give arg types
+  void restart_pendsv();
+..\Drivers\driver\heap_1.h(45): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\driver\thread.c(20): warning:  #223-D: function "printf" declared implicitly
+          printf("Invalid priority!\n");
+..\Drivers\driver\thread.c(44): warning:  #223-D: function "printf" declared implicitly
+              printf("Error: currentTask is NULL!\r\n");
+..\Drivers\driver\thread.c(195): warning:  #550-D: variable "prev"  was set but never used
+      TaskControlBlock *prev = NULL;
+..\Drivers\driver\thread.c(221): warning:  #223-D: function "malloc" declared implicitly
+  				TaskControlBlock *tcb = (TaskControlBlock *)malloc(sizeof(TaskControlBlock));
+..\Drivers\driver\thread.c(223): warning:  #223-D: function "printf" declared implicitly
+              printf("Memory allocation for TaskControlBlock failed\r\n");
+..\Drivers\driver\thread.c(231): warning:  #223-D: function "printf" declared implicitly
+              printf("Memory allocation for stack failed\r\n");
+..\Drivers\driver\thread.c: 9 warnings, 0 errors
 linking...
-Program Size: Code=8006 RO-data=310 RW-data=124 ZI-data=5204  
+Program Size: Code=8046 RO-data=310 RW-data=124 ZI-data=5204  
 FromELF: creating hex file...
-"hal_test1\hal_test1.axf" - 0 Error(s), 22 Warning(s).
+"hal_test1\hal_test1.axf" - 0 Error(s), 42 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -99,7 +147,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
